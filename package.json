@@ -1,0 +1,15 @@
+{
+  "name": "autotest.7-cypress2",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08"
+  },
+  "dependencies": {
+    "cypress": "^15.15.0"
+  }
+}

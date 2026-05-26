@@ -1,0 +1,32 @@
+{
+  "login": {
+    "emailInput": "input[name=\"email\"]",
+    "passwordInput": "input[name=\"password\"]",
+    "loginButton": ".login__button"
+  },
+  "dashboard": {
+    "managementHeader": "Управление залами",
+    "headerCheck": ".page-header__title"
+  },
+  "movieSelection": {
+    "movieItem": ".movie",
+    "movieTitleClass": ".conf-step__movie-title",
+    "hallType": "Современный зал",
+    "sessionTime17": "17:00",
+    "sessionTime13": "13:00",
+    "movieChoiceByAdmin": ".conf-step__movie:nth-of-type(3)"
+  },
+  "navigation": {
+    "daySelectorClass": ".page-nav__day",
+    "daySelector4": "a.page-nav__day:nth-of-type(4)"
+  },
+  "seating": {
+    "schemeWrapper": ".buying-scheme__wrapper",
+    "seatRow": ":nth-child({row})",
+    "seatNumber": ":nth-child({seat})"
+  },
+  "booking": {
+    "confirmButton": ".acceptin-button",
+    "successMessage": "Вы выбрали билеты:"
+  }
+}
