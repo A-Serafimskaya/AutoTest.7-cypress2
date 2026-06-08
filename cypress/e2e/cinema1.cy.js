@@ -36,5 +36,33 @@ describe("admin login tests", () => {
       cy.contains(selectors.dashboard.managementHeader).should("not.exist");
     });
   });
-});
 
+  it("Should possible to book on Dostat' noghi ", () => {
+    const seats2 = require("../fixtures/seats2.json");
+
+    const selectors = require("../fixtures/selectors.json");
+
+    cy.visit("/");
+    cy.get(selectors.navigation.daySelectorClass).should("have.length", 7);
+    cy.get(selectors.navigation.daySelectorClass)
+      .contains(selectors.navigation.thurthday)
+      .click();
+
+    cy.window().then((win) => {
+      win.scrollTo(0, 800); // скролл вниз на 800 px
+    });
+
+    cy.contains(selectors.movieSelection.movie).should("be.visible");
+    cy.contains(selectors.movieSelection.sessionTime15)
+      .should("be.visible")
+      .click();
+
+    seats2.forEach((seat) => {
+      cy.get(
+        `${selectors.seating.schemeWrapper} > :nth-child(${seat.row}) > :nth-child(${seat.seat})`,
+      ).click();
+    });
+    cy.get(selectors.booking.confirmButton).click();
+    cy.contains("Вы выбрали билеты:").should("be.visible");
+  });
+});

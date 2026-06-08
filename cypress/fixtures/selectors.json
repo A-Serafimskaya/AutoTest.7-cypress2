@@ -11,14 +11,21 @@
   "movieSelection": {
     "movieItem": ".movie",
     "movieTitleClass": ".conf-step__movie-title",
-    "hallType": "Современный зал",
+    "movieTitle": "movie__title",
+    "hallType1": "Современный зал",
+    "hallType2": "Вип зал",
     "sessionTime17": "17:00",
     "sessionTime13": "13:00",
-    "movieChoiceByAdmin": ".conf-step__movie:nth-of-type(3)"
+    "sessionTime20": "20:00",
+    "sessionTime15": "15:30",
+    "movieChoiceByAdmin": ".conf-step__movie:nth-of-type(3)",
+    "movie": "Достать ножи"
   },
   "navigation": {
     "daySelectorClass": ".page-nav__day",
-    "daySelector4": "a.page-nav__day:nth-of-type(4)"
+    "daySelector4": "a.page-nav__day:nth-of-type(4)",
+    "sunday": "Вс",
+    "thurthday": "Чт"
   },
   "seating": {
     "schemeWrapper": ".buying-scheme__wrapper",
