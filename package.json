@@ -8,15 +8,15 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08",
-    "cy:cinema1": "cypress run --group cinema1 --ci-build-id 17 --spec cypress/e2e/cinema1.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08",
-    "cy:cinema2": "cypress run --group cinema2 --ci-build-id 17 --spec cypress/e2e/cinema2.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08",
+    "cy:cinema1": "cypress run --group cinema1 --ci-build-id ${CI_BUILD_ID:-${BUILD_ID}} --spec cypress/e2e/cinema1.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08",
+    "cy:cinema2": "cypress run --group cinema2 --ci-build-id ${CI_BUILD_ID:-${BUILD_ID}} --spec cypress/e2e/cinema2.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08",
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:electron": "cypress run --browser electron",
-    "cy:cinema2:chrome": "cypress run --group cinema2 --ci-build-id 17 --spec cypress/e2e/cinema2.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser chrome",
-    "cy:cinema1:chrome": "cypress run --group cinema1 --ci-build-id 17 --spec cypress/e2e/cinema1.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser chrome",
-    "cy:cinema2:electron": "cypress run --group cinema2 --ci-build-id 17 --spec cypress/e2e/cinema2.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser electron",
-    "cy:cinema1:electron": "cypress run --group cinema1 --ci-build-id 17 --spec cypress/e2e/cinema1.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser electron",
-    "cy:cinemas:parallel": "cypress run --group cinema1 --ci-build-id 18 --spec cypress/e2e/cinema1.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser chrome & cypress run --group cinema2 --ci-build-id 18 --spec cypress/e2e/cinema2.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser electron"
+    "cy:cinema2:chrome": "cypress run --group cinema2 --ci-build-id ${CI_BUILD_ID:-${BUILD_ID}} --spec cypress/e2e/cinema2.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser chrome",
+    "cy:cinema1:chrome": "cypress run --group cinema1 --ci-build-id ${CI_BUILD_ID:-${BUILD_ID}} --spec cypress/e2e/cinema1.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser chrome",
+    "cy:cinema2:electron": "cypress run --group cinema2 --ci-build-id ${CI_BUILD_ID:-${BUILD_ID}} --spec cypress/e2e/cinema2.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser electron",
+    "cy:cinema1:electron": "cypress run --group cinema1 --ci-build-id ${CI_BUILD_ID:-${BUILD_ID}} --spec cypress/e2e/cinema1.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser electron",
+    "cy:cinemas:parallel": "cypress run --group cinema1 --ci-build-id ${CI_BUILD_ID:-${BUILD_ID}} --spec cypress/e2e/cinema1.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser chrome & cypress run --group cinema2 --ci-build-id ${CI_BUILD_ID:-${BUILD_ID}} --spec cypress/e2e/cinema2.cy.js --record --key 0fda764d-f9cd-47c3-9231-fef54fecbe08 --browser electron"
   },
   "dependencies": {
     "cypress": "^15.15.0"
